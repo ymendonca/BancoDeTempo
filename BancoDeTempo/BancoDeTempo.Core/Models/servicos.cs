@@ -15,12 +15,12 @@ namespace BancoDeTempo.Core.Models
         public string titulo { get; set; }
         public string Descrisao { get; set; }
         public string Imagem { get; set; }
-        public DateTime duracao { get; set; }
-        public string linguagem_partilha { get; set; }
-        public string experiencia_assunto { get; set; }
-        public string disponibilidade_partilha { get; set; }
-        public string condicao_acesso { get; set; }
-        public string  category { get; set; }
+        public string Duracao { get; set; }
+        public string Linguagem_partilha { get; set; }
+        public string Experiencia_assunto { get; set; }
+        public string Disponibilidade_partilha { get; set; }
+        public string Condicao_acesso { get; set; }
+        public string  Category { get; set; }
 
 
         public Servicos()

@@ -170,6 +170,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\ServicosManageController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -234,6 +235,10 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\ServicosManage\Index.cshtml" />
+    <Content Include="Views\ServicosManage\Create.cshtml" />
+    <Content Include="Views\ServicosManage\Edit.cshtml" />
+    <Content Include="Views\ServicosManage\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -245,6 +250,24 @@
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BancoDeTempo.Core\BancoDeTempo.Core.csproj">
+      <Project>{57a6c6fe-9c6f-4303-baf1-0bdc41a37b84}</Project>
+      <Name>BancoDeTempo.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BancoDeTempo.DataAccess.InMemories\BancoDeTempo.DataAccess.InMemories.csproj">
+      <Project>{4ce95ac6-bbe1-4288-b2b5-b366ca3d1d89}</Project>
+      <Name>BancoDeTempo.DataAccess.InMemories</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BancoDeTempo.DataAccess.SQL\BancoDeTempo.DataAccess.SQL.csproj">
+      <Project>{0c880b15-e840-494c-9e58-da42cceeb6cf}</Project>
+      <Name>BancoDeTempo.DataAccess.SQL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BancoDeTempo.Services\BancoDeTempo.Services.csproj">
+      <Project>{cecc2d43-78b8-4abe-8925-9c5f0bd3d0bf}</Project>
+      <Name>BancoDeTempo.Services</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
