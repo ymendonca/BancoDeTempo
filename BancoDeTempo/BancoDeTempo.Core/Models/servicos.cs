@@ -20,6 +20,8 @@ namespace BancoDeTempo.Core.Models
         public string experiencia_assunto { get; set; }
         public string disponibilidade_partilha { get; set; }
         public string condicao_acesso { get; set; }
+        public string  category { get; set; }
+
 
         public Servicos()
         {
