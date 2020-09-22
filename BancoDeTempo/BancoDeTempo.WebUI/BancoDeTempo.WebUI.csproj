@@ -168,6 +168,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\CategoriaServicoManageController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\ServicosManageController.cs" />
@@ -239,6 +240,10 @@
     <Content Include="Views\ServicosManage\Create.cshtml" />
     <Content Include="Views\ServicosManage\Edit.cshtml" />
     <Content Include="Views\ServicosManage\Delete.cshtml" />
+    <Content Include="Views\CategoriaServicoManage\Index.cshtml" />
+    <Content Include="Views\CategoriaServicoManage\Create.cshtml" />
+    <Content Include="Views\CategoriaServicoManage\Edit.cshtml" />
+    <Content Include="Views\CategoriaServicoManage\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

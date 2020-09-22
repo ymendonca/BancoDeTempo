@@ -1,21 +1,24 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 using BancoDeTempo.Core.Models;
 using BancoDeTempo.DataAccess.InMemories;
+using BancoDeTempo.Core.ViewModels;
 
 namespace BancoDeTempo.WebUI.Controllers
 {
     public class ServicosManageController : Controller
     {
         ServicosRepositorio context;
+        CategoriaServicoRepositorio servicoscategories;
+
 
         public ServicosManageController()
         {
             context = new ServicosRepositorio();
+            servicoscategories = new CategoriaServicoRepositorio();
         }
+
         // GET: ServicosManage
         public ActionResult Index()
         {
@@ -25,8 +28,12 @@ namespace BancoDeTempo.WebUI.Controllers
 
         public ActionResult Create()
         {
-            Servicos servicos = new Servicos();
-            return View(servicos);
+            ServicosManagerViewModel viewmodel = new ServicosManagerViewModel();
+
+            viewmodel.Servicos = new Servicos();
+            viewmodel.Servicoscategories = servicoscategories.Collection();
+           
+            return View(viewmodel);
         }
 
         [HttpPost]
@@ -54,7 +61,10 @@ namespace BancoDeTempo.WebUI.Controllers
                 return HttpNotFound();
             }
             else {
-                return View(servicos);
+                ServicosManagerViewModel viewModel = new ServicosManagerViewModel();
+                viewModel.Servicos = servicos;
+                viewModel.Servicoscategories = servicoscategories.Collection();
+                return View(viewModel);
             }
            
         }
